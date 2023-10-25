@@ -94,6 +94,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <?php endif; ?>
 
         <form method="POST" class="card p-4 align-middle" style="width: 21rem; margin-left:auto; margin-right:auto; text-align:left" >
+        <ul class="list-group list-group-flush">
+        <li class="list-group-item">
             <div class="form-group">
                 <label for="numbers"><i class="bi bi-list-ol"></i> Enter 7-digit Art.Nos. (one per line):</label>
                 <textarea class="form-control" id="numbers" name="numbers" rows="4" required></textarea>
@@ -134,8 +136,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-            <button class="btn btn-outline-danger mt-4" type="submit"><i class="bi bi-download"></i> Generate QR Codes</button>
-            <ul class="list-group list-group-flush">
+            <button class="btn btn-outline-danger mt-4 mb-1" type="submit"><i class="bi bi-download"></i> Generate QR Codes</button>
+        </li>        
     <li class="list-group-item">Ein hier generierter QR-Code ist NICHT automatisch im System hinterlegt -> IT kontaktieren.</li>
     
   </ul>        
