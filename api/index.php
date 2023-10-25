@@ -2,7 +2,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $numbers = explode("\n", $_POST["numbers"]);
 
-    // Validieren und bereinigen Sie die eingegebenen Nummern
+    // Validieren und bereinigen der eingegebenen Nummern
     $validNumbers = [];
     foreach ($numbers as $number) {
         $cleanedNumber = trim($number);
