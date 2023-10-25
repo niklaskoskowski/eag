@@ -135,8 +135,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
             <button class="btn btn-outline-danger mt-4" type="submit"><i class="bi bi-download"></i> Generate QR Codes</button>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </form>
+            <ul class="list-group list-group-flush">
+    <li class="list-group-item">Ein hier generierter QR-Code ist NICHT automatisch im System hinterlegt -> IT kontaktieren.</li>
+    
+  </ul>        
+</form>
     </div>        
 
 </body>
