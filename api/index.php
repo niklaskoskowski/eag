@@ -129,7 +129,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
             <button class="btn btn-outline-danger mt-4 mb-3" type="submit"><i class="bi bi-download"></i> Generate QR
             Codes</button>
-            <li class="list-group-item text-secondary">ⓘ A QR code generated here is NOT automatically stored in the system.
+            <li class="list-group-item text-secondary">ⓘ A QR-Code generated here is NOT automatically stored in the system.
             </li>
          </form>
       </div>
