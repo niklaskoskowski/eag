@@ -30,7 +30,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             $zipFilename = "QR-Codes" . $languageCode . ".zip";
             $zip = new ZipArchive();
-            if ($zip->open($zipFilename, ZipArchive::CREATE) === true) {
+            $tmpDir = sys_get_temp_dir(); // Get the system's temporary directory
+
+            $zipPath = $tmpDir . '/' . $zipFilename;
+
+            if ($zip->open($zipPath, ZipArchive::CREATE) === true) {
                 foreach ($validNumbers as $number) {
                     $filename = $number . $languageCode . ".svg";
                     $color = $_POST["color"];
@@ -44,10 +48,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 header("Content-Type: application/zip");
                 header("Content-Disposition: attachment; filename=\"$zipFilename\"");
-                readfile($zipFilename);
+                readfile($zipPath);
 
                 // Löschen der temporären ZIP-Datei
-                unlink($zipFilename);
+                unlink($zipPath);
 
                 exit;
             } else {
@@ -59,6 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html>
