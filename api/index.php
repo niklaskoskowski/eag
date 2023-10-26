@@ -88,9 +88,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
          }
       </style>
    </head>
-   <body class="text-center">
+   <body class="text-center bg-dark">
       <div class="my-auto mx-auto align-items-center">
-         <h1>Video-QR <i class="bi bi-qr-code"></i></h1>
+         <h1 class="text-light">Video-QR <i class="bi bi-qr-code"></i></h1>
          <?php if (isset($error)): ?>
          <p style="color: red;">
             <?php echo $error; ?>
